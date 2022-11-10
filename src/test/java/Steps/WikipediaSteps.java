@@ -39,6 +39,7 @@ public class WikipediaSteps {
         //Assert.assertTrue(driver.getPageSource().contains(tekst));
         //Assert.assertTrue(tekst,driver.findElement(By.id("firstHeading")).getText().toLowerCase().contains(tekst));
         Assert.assertTrue(driver.findElement(By.id("firstHeading")).getText().toLowerCase().startsWith(tekst));
+        Assert.assertTrue(driver.findElement(By.className("mw-page-title-main")).getText().contains(tekst));
     }
 
     @AfterAll
